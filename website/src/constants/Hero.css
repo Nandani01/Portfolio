@@ -1,0 +1,66 @@
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding-top: 20vh;
+  }
+  
+  .heading {
+    color: white;
+    font-size: 3rem;
+    margin-top: 20vh;
+  }
+  
+  .farewell {
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    justify-content: center;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 20px;
+    transition: flex 0.1s ease-in-out;
+    position: relative;
+  }
+  
+  .panel h3 {
+    font-size: 24px;
+    color: aliceblue;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .panel.active {
+    flex: 3;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+  
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+      display: none;
+    }
+  }
+  
